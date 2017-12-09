@@ -1,0 +1,37 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px 100px 40px;
+}
+
+.header {
+    grid-column: span 12;
+}
+
+.menu {
+    grid-column: span 4;
+}
+
+.body {
+    grid-column: span 8;
+}
+
+.footer {
+    grid-column: span 12;
+}
+
+
+/*For screens smaller than 480px push menu to top left*/
+
+@media screen and (max-width: 480px) {
+    .header {
+        grid-column: span 6;
+    }
+    .menu {
+        grid-row: 1;
+        grid-column: span 6;
+    }
+    .body {
+        grid-column: span 12;
+    }
+}
